@@ -1,8 +1,6 @@
 # Banco 
 
-Crea una aplicación que sirva para gestionar las cuentas de los clientes de un banco. 
-
-## Beans
+Crea una aplicación que sirva para gestionar las cuentas de los clientes de un banco.
 
 ### Bank
 
