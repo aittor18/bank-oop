@@ -13,10 +13,6 @@ public class Customer {
         this.surname = surname;
     }
 
-    public Customer showInfo(String NIF, String name, String surname) {
-
-    }
-
     public String getNIF() {
         return NIF;
     }

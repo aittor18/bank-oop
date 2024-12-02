@@ -2,6 +2,7 @@ package org.ies.bank.model;
 
 import java.util.Arrays;
 import java.util.Objects;
+import java.util.Scanner;
 
 public class Bank {
     private String name;
@@ -10,6 +11,22 @@ public class Bank {
     public Bank(String name, Account[] accounts) {
         this.name = name;
         this.accounts = accounts;
+    }
+
+    public void showAccounts() {
+       boolean trueorfalse = false;
+
+    }
+
+    public void showIban(String iban, Scanner scanner) {
+        System.out.println("Introduce tu IBAN:");
+        String number = scanner.nextLine();
+
+        if (number.equals(iban)) {
+
+            System.out.println();
+        }
+
     }
 
     public String getName() {

@@ -1,15 +1,15 @@
 # Banco 
 
-Crea una aplicación que sirva para gestionar las cuentas de los clientes de un banco.
+_Crea una aplicación que sirva para gestionar las cuentas de los clientes de un banco._
 
 ### Bank
 
 Campos:
-- Nombre del banco
-- Array de cuentas.
+~~- Nombre del banco~~
+~~- Array de cuentas.~~
 
 Métodos:
-- Mostrar todas las cuentas del banco (IBAN, saldo y NIF del cliente)
+~~- Mostrar todas las cuentas del banco (IBAN, saldo y NIF del cliente)~~
 - Dado un IBAN, mostrar la información de la cuenta con ese IBAN. Si no existe una cuenta con ese IBAN devuelve null.
 - Dado un NIF, mostrar todas las cuentas del cliente con ese NIF 
 - Dado un IBAN y una cantidad de dinero, ingresar esa cantidad en la cuenta con ese IBAN. Si no se encuentra la cuenta con ese IBAN muestra el mensaje "No se encuentra la cuenta"

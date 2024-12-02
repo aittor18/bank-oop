@@ -1,7 +1,6 @@
 package org.ies.bank.components;
 
 import org.ies.bank.model.Account;
-import org.ies.bank.model.Customer;
 
 import java.util.Scanner;
 
