@@ -1,14 +1,13 @@
 package org.ies.bank.model;
 
-import java.util.Arrays;
 import java.util.Objects;
 
 public class Account {
     private String IBAN;
     private double balance;
-    private Customer[] customers;
+    private String customers;
 
-    public Account(String IBAN, double balance, Customer[] customers) {
+    public Account(String IBAN, double balance, String customers) {
         this.IBAN = IBAN;
         this.balance = balance;
         this.customers = customers;
@@ -30,11 +29,11 @@ public class Account {
         this.balance = balance;
     }
 
-    public Customer[] getCustomers() {
+    public String getCustomers() {
         return customers;
     }
 
-    public void setCustomers(Customer[] customers) {
+    public void setCustomers(String customers) {
         this.customers = customers;
     }
 
@@ -43,12 +42,12 @@ public class Account {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Account account = (Account) o;
-        return Double.compare(balance, account.balance) == 0 && Objects.equals(IBAN, account.IBAN) && Objects.deepEquals(customers, account.customers);
+        return Double.compare(balance, account.balance) == 0 && Objects.equals(IBAN, account.IBAN) && Objects.equals(customers, account.customers);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(IBAN, balance, Arrays.hashCode(customers));
+        return Objects.hash(IBAN, balance, customers);
     }
 
     @Override
@@ -56,7 +55,7 @@ public class Account {
         return "Account{" +
                 "IBAN='" + IBAN + '\'' +
                 ", balance=" + balance +
-                ", customers=" + Arrays.toString(customers) +
+                ", customers=" + customers +
                 '}';
     }
 }
