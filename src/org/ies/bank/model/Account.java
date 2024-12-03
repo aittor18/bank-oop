@@ -13,6 +13,9 @@ public class Account {
         this.customer = customer;
     }
 
+    public void deposit (double amount) {
+        balance += amount;
+    }
     public void showInfo (){
         System.out.println("IBAN: " + iban + " Saldo: " + balance + " Nombre: " + customer);
     }

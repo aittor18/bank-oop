@@ -18,6 +18,25 @@ public class Bank {
 
     }
 
+    public void deposit(String iban, double amount) {
+        var account = findAccount(iban);
+
+        if (account != null) {
+            account.deposit(amount);
+        } else {
+            System.out.println("Cuenta no encontrada");
+        }
+    }
+
+    public Account findAccount(String iban) {
+        for (var account : accounts) {
+            if (account.getIban().equals(iban)) {
+                return account;
+            }
+        }
+        return null;
+    }
+
     public void showIban(String iban, Scanner scanner) {
         System.out.println("Introduce tu IBAN:");
         String number = scanner.nextLine();
