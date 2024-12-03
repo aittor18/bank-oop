@@ -13,11 +13,6 @@ public class Bank {
         this.accounts = accounts;
     }
 
-    public void showAccounts() {
-       boolean trueorfalse = false;
-
-    }
-
     public void deposit(String iban, double amount) {
         var account = findAccount(iban);
 
@@ -47,6 +42,19 @@ public class Bank {
         }
 
     }
+
+    public void showAccounts(String nif) {
+        for (var account : accounts) {
+
+            if (account.getCustomer().getNIF().equals(nif)) {
+
+                System.out.print("Cuentas: " + account);
+
+            }
+        }
+    }
+
+
 
     public String getName() {
         return name;
