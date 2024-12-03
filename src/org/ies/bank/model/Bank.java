@@ -54,7 +54,17 @@ public class Bank {
         }
     }
 
+    public int countAccounts(String nif) {
+        int count = 0;
+        for (var account : accounts) {
 
+            if (account.getCustomer().getNIF().equals(nif)) {
+                count++;
+
+            }
+
+        }
+    }
 
     public String getName() {
         return name;
