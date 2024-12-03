@@ -64,6 +64,20 @@ public class Bank {
             }
 
         }
+
+        return count;
+
+    }
+
+    // Dado un IBAN, devuelve los datos del cliente al que pertenece la cuenta. Si no existe la cuenta, devuelve null
+    public Customer findAccountIban(String iban) {
+        Account account = findAccount(iban);
+
+        if (account != null) {
+            return account.getCustomer();
+        } else {
+            return null;
+        }
     }
 
     public String getName() {
