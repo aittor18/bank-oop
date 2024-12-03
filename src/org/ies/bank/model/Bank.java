@@ -13,6 +13,12 @@ public class Bank {
         this.accounts = accounts;
     }
 
+    public void showAccounts() {
+        for (var account : accounts) {
+            System.out.println("Nombre: " + account.getIban() + " Saldo: " + account.getBalance() + " NIF: " + account.getCustomer().getNIF());
+        }
+    }
+
     public void deposit(String iban, double amount) {
         var account = findAccount(iban);
 
