@@ -2,7 +2,9 @@ package org.ies.bank.components;
 
 import org.ies.bank.model.Account;
 import org.ies.bank.model.Bank;
+import org.ies.bank.model.Customer;
 
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class BankApp {
@@ -43,6 +45,30 @@ public class BankApp {
                     }
                     break;
                 case 3:
+                    System.out.println("Introduce el NIF: ");
+                    String nif = scanner.nextLine();
+                    bank.showAccounts(nif);
+                    break;
+
+                case 4:
+                    System.out.print("Introduce un IBAN: ");
+                    String iban1 = scanner.nextLine();
+                    System.out.print("Cuánto dinero vas a ingresar?: ");
+                    double amount = scanner.nextDouble();
+                    scanner.nextLine();
+
+                    bank.deposit(iban1, amount);
+                    break;
+
+                case 5:
+                    System.out.print("Introduce un IBAN: ");
+                    String iban2 = scanner.nextLine();
+                    System.out.print("Cuánto dinero vas a ingresar?: ");
+                    double amount1 = scanner.nextDouble();
+                    scanner.nextLine();
+
+                    bank.deposit(iban2, -amount1);
+                    break;
 
             }
         } while (option != 6);
