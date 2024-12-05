@@ -20,9 +20,6 @@ public class Account {
         System.out.println("IBAN: " + iban + " Saldo: " + balance + " Nombre: " + customer);
     }
 
-    public Account(String iban, double balance, String customer) {
-    }
-
     public String getIban() {
         return iban;
     }
