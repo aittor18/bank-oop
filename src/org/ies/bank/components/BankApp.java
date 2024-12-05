@@ -1,28 +1,25 @@
 package org.ies.bank.components;
 
+import org.ies.bank.model.Bank;
+
 import java.util.Scanner;
 
 public class BankApp {
+    private final BankReader bankReader;
+    private final Scanner scanner;
+
+    public BankApp(BankReader bankReader, Scanner scanner) {
+        this.bankReader = bankReader;
+        this.scanner = scanner;
+    }
+
     public void run() {
         Scanner scanner = new Scanner(System.in);
-        int option;
-        do {
-            System.out.println("1. Mostrar las cuentas del banco");
-            System.out.println("2. Mostrar datos de una cuenta");
-            System.out.println("3. Mostrar los datos de las cuentas de un cliente");
-            System.out.println("4. Ingresar dinero en la cuenta");
-            System.out.println("5. Sacar dinero de una cuenta");
-            System.out.println("6. Salir");
-            System.out.print("Introduce la opción: ");
-            option = scanner.nextInt();
-            scanner.nextLine();
+        CustomerReader customerReader = new CustomerReader(scanner);
+        AccountReader accountReader = new AccountReader(scanner, customerReader);
+        BankReader bankReader = new BankReader(scanner, accountReader);
+        BankApp bankApp = new BankApp(bankReader, scanner);
 
-            switch (option) {
-                case 1:
-
-            }
-        } while (option != 6);
-
-
+        bankApp.run();
     }
 }
