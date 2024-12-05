@@ -38,25 +38,28 @@ public class Bank {
         return null;
     }
 
-    public void showIban(String iban, Scanner scanner) {
-        System.out.println("Introduce tu IBAN:");
-        String number = scanner.nextLine();
-
-        if (number.equals(iban)) {
-
-            System.out.println();
+    public void showIban(String iban) {
+        Account account = findAccount(iban);
+        if (account != null) {
+            account.showInfo();
+        } else {
+            System.out.println("Cuenta no encontrada");
         }
-
     }
 
     public void showAccounts(String nif) {
+        boolean found = false;
         for (var account : accounts) {
 
             if (account.getCustomer().getNIF().equals(nif)) {
 
-                System.out.print("Cuentas: " + account);
-
+                System.out.print(account);
+                found = true;
             }
+        }
+
+        if (!found) {
+            System.out.println("No hay cuentas para el NIF: " + nif);
         }
     }
 
