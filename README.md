@@ -69,9 +69,9 @@ Crea readers para todos los beans
 
 
 ### BankApp2
-Tendrá un método run() que realice lo siguiente:
+~~Tendrá un método run() que realice lo siguiente:~~
 
-- Pide un banco usando BankReader
+~~- Pide un banco usando BankReader~~
 - Busca la cuenta con IBAN "ES0001".
   - Si no existe muestra "La cuenta no existe"
   - Si existe, hace un deposito en la misma de 500

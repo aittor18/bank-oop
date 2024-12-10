@@ -16,6 +16,6 @@ public class Main {
         AccountReader accountReader = new AccountReader(scanner, customerReader);
         BankReader bankReader = new BankReader(scanner, accountReader);
 
-        bankApp.run();
+        // bankApp.run();
     }
 }
