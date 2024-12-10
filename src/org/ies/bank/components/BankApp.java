@@ -2,22 +2,22 @@ package org.ies.bank.components;
 
 import org.ies.bank.model.Account;
 import org.ies.bank.model.Bank;
-import org.ies.bank.model.Customer;
 
-import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class BankApp {
-    private final Bank bank;
+    private final BankReader bankReader;
     private final Scanner scanner;
 
-    public BankApp(Bank bank, Scanner scanner) {
-        this.bank = bank;
+    public BankApp(BankReader bankReader, Scanner scanner) {
+        this.bankReader = bankReader;
         this.scanner = scanner;
     }
 
     public void run() {
         int option;
+        Bank bank = bankReader.read();
+
         do {
             System.out.println("Elige una opción");
             System.out.println("1. Mostrar cuentas");
@@ -25,7 +25,10 @@ public class BankApp {
             System.out.println("3. Mostrar cuentas de un cliente");
             System.out.println("4. Ingresar dinero");
             System.out.println("5. Sacar dinero");
-            System.out.println("6. Salir");
+            System.out.println("6. Contar cuentas de un cliente");
+            System.out.println("7. Mostrar cliente de cuenta");
+            System.out.println("8. Realizar transferencia");
+            System.out.println("9. Salir");
             System.out.print("Introduce la opción que quieras: ");
             option = scanner.nextInt();
             scanner.nextLine();
@@ -63,12 +66,14 @@ public class BankApp {
                 case 5:
                     System.out.print("Introduce un IBAN: ");
                     String iban2 = scanner.nextLine();
-                    System.out.print("Cuánto dinero vas a ingresar?: ");
+                    System.out.print("Cuánto dinero vas a retirar?: ");
                     double amount1 = scanner.nextDouble();
                     scanner.nextLine();
 
                     bank.deposit(iban2, -amount1);
                     break;
+
+                case 6:
 
             }
         } while (option != 6);
