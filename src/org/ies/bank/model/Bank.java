@@ -103,6 +103,25 @@ public class Bank {
         return null;
     }
 
+    public void transfer(String iban, String iban2, double amount) {
+
+        Account account = findAccount(iban);
+        Account account2 = findAccount(iban2);
+
+        if (account != null && account2 != null) {
+
+            if (account.getBalance() >= amount) {
+
+                account.deposit(-amount);
+                account2.deposit(+amount);
+
+            } else {
+                System.out.println("No hay suficiente dinero");
+            }
+
+        }
+    }
+
 
     public String getName() {
         return name;

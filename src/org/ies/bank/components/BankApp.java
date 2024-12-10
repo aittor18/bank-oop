@@ -70,7 +70,7 @@ public class BankApp {
                     double amount1 = scanner.nextDouble();
                     scanner.nextLine();
 
-                    bank.deposit(iban2, -amount1);
+                    bank.deposit(iban, -amount1);
                     break;
 
                 case 6:
@@ -86,7 +86,25 @@ public class BankApp {
 
                     bank.findClientAccount(iban);
                     break;
+
+                case 8:
+                    System.out.print("Introduce tu IBAN: ");
+                    iban = scanner.nextLine();
+
+                    System.out.print("Introduce la cantidad de dinero a transferir: ");
+                    amount = scanner.nextDouble();
+                    scanner.nextLine();
+
+                    System.out.print("Introduce el IBAN del receptor de la transferencia: ");
+                    String iban2 = scanner.nextLine();
+
+                    bank.transfer(iban, iban2, amount);
+                    break;
+
+                case 9:
+                    System.out.println("Saliendo, buenos días :)");
+                    break;
             }
-        } while (option != 6);
+        } while (option != 9);
     }
 }
