@@ -75,9 +75,9 @@ public class BankApp {
 
                 case 6:
                     System.out.println("Introduce tu NIF: ");
-                    String nif = scanner.nextLine();
+                    String nif1 = scanner.nextLine();
 
-                    bank.countAccounts(nif);
+                    bank.countAccounts(nif1);
             }
         } while (option != 6);
     }
