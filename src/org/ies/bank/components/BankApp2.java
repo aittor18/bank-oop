@@ -18,7 +18,7 @@ private final BankReader bankReader;
         Bank bank = bankReader.read();
 
         Account account = bank.findAccount("ES0001");
-        if (account.getIban().equals("ES0001")) {
+        if (account.equals("ES0001")) {
             bank.deposit("ES0001", 500);
         }
     }
