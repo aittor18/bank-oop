@@ -89,6 +89,19 @@ public class Bank {
         }
     }
 
+    public Account findClientAccount(String iban) {
+        for (Account account : accounts) {
+
+            if (account.getCustomer().equals(iban)) {
+
+                return account;
+
+            }
+
+        }
+
+        return null;
+    }
 
 
     public String getName() {

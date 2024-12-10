@@ -63,7 +63,7 @@ Crea readers para todos los beans
       ~~- Si no existe se muestra el mensaje "No existe la cuenta"
       - Si hay suficiente saldo, se reduce el saldo. Si no hay suficiente saldo se muestra "Saldo insuficiente"
       - Se muestra la cuenta~~
-  - Contar cuentas de cliente
+  ~~- Contar cuentas de cliente~~
   - Mostrar cliente de cuenta
   - Realizar transferencia
 

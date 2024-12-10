@@ -55,17 +55,17 @@ public class BankApp {
 
                 case 4:
                     System.out.print("Introduce un IBAN: ");
-                    String iban1 = scanner.nextLine();
+                    iban = scanner.nextLine();
                     System.out.print("Cuánto dinero vas a ingresar?: ");
                     double amount = scanner.nextDouble();
                     scanner.nextLine();
 
-                    bank.deposit(iban1, amount);
+                    bank.deposit(iban, amount);
                     break;
 
                 case 5:
                     System.out.print("Introduce un IBAN: ");
-                    String iban2 = scanner.nextLine();
+                    iban = scanner.nextLine();
                     System.out.print("Cuánto dinero vas a retirar?: ");
                     double amount1 = scanner.nextDouble();
                     scanner.nextLine();
@@ -75,13 +75,17 @@ public class BankApp {
 
                 case 6:
                     System.out.println("Introduce tu NIF: ");
-                    String nif1 = scanner.nextLine();
+                    nif = scanner.nextLine();
 
-                    bank.countAccounts(nif1);
+                    bank.countAccounts(nif);
                     break;
 
                 case 7:
+                    System.out.println("Introduce tu IBAN: ");
+                    iban = scanner.nextLine();
 
+                    bank.findClientAccount(iban);
+                    break;
             }
         } while (option != 6);
     }
