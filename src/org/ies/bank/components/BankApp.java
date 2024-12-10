@@ -78,6 +78,10 @@ public class BankApp {
                     String nif1 = scanner.nextLine();
 
                     bank.countAccounts(nif1);
+                    break;
+
+                case 7:
+
             }
         } while (option != 6);
     }
