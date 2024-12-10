@@ -64,8 +64,8 @@ Crea readers para todos los beans
       - Si hay suficiente saldo, se reduce el saldo. Si no hay suficiente saldo se muestra "Saldo insuficiente"
       - Se muestra la cuenta~~
   ~~- Contar cuentas de cliente~~
-  - Mostrar cliente de cuenta
-  - Realizar transferencia
+  ~~- Mostrar cliente de cuenta~~
+  ~~- Realizar transferencia~~
 
 
 ### BankApp2

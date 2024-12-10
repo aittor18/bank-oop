@@ -119,6 +119,8 @@ public class Bank {
                 System.out.println("No hay suficiente dinero");
             }
 
+        } else {
+            System.out.println("Una de las 2 cuentas no existe");
         }
     }
 
