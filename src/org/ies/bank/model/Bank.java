@@ -18,6 +18,14 @@ public class Bank {
         }
     }
 
+    public void showInfo(String iban) {
+        for (var account : accounts) {
+            if (account.getIban().equals(iban)) {
+                account.showInfo();
+            }
+        }
+    }
+
     public void deposit(String iban, double amount) {
         var account = findAccount(iban);
 

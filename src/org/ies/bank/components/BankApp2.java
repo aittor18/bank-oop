@@ -28,7 +28,8 @@ public class BankApp2 {
             System.out.println("La cuenta no existe");
         }
 
-        bank.showAccounts();
+        bank.showInfo("ES0001");
+        bank.showInfo("ES0002");
 
 
     }
