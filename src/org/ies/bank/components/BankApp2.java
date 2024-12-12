@@ -3,14 +3,10 @@ package org.ies.bank.components;
 import org.ies.bank.model.Account;
 import org.ies.bank.model.Bank;
 
-import java.util.Scanner;
-
 public class BankApp2 {
-private final Scanner scanner;
-private final BankReader bankReader;
+    private final BankReader bankReader;
 
-    public BankApp2(Scanner scanner, BankReader bankReader) {
-        this.scanner = scanner;
+    public BankApp2(BankReader bankReader) {
         this.bankReader = bankReader;
     }
 
@@ -18,9 +14,6 @@ private final BankReader bankReader;
         Bank bank = bankReader.read();
 
         Account account = bank.findAccount("ES0001");
-        //if (account.equals("ES0001")) {
-          //  bank.deposit("ES0001", 500);
-        //}
 
         if (account != null) {
             account.deposit(500);
@@ -29,7 +22,6 @@ private final BankReader bankReader;
         }
 
         account = bank.findAccount("ES0002");
-        //if (account.equals("ES0002")) {
         if (account != null) {
             account.deposit(-30);
         } else {
