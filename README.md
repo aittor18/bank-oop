@@ -72,12 +72,12 @@ Crea readers para todos los beans
 ~~Tendrá un método run() que realice lo siguiente:~~
 
 ~~- Pide un banco usando BankReader~~
-- Busca la cuenta con IBAN "ES0001".
-  - Si no existe muestra "La cuenta no existe"
-  - Si existe, hace un deposito en la misma de 500
-- Busca otra cuenta con IBAN "ES0002"
-  - Si no existe muestra "La cuenta no existe"
-  - Si existe, saca 30 euros
+~~- Busca la cuenta con IBAN "ES0001".~~
+  ~~- Si no existe muestra "La cuenta no existe"~~
+  ~~- Si existe, hace un deposito en la misma de 500~~
+~~- Busca otra cuenta con IBAN "ES0002"~~
+  ~~- Si no existe muestra "La cuenta no existe"~~
+  ~~- Si existe, saca 30 euros~~
 - Muestra en pantalla la información de la cuenta "ES0001"
 - Muestra en pantalla la información de la cuenta "ES0002"
 - Haz una trasnferencia de 500 euros desde "ES0001" a "ES0002"

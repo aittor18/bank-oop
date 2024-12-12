@@ -18,8 +18,22 @@ private final BankReader bankReader;
         Bank bank = bankReader.read();
 
         Account account = bank.findAccount("ES0001");
-        if (account.equals("ES0001")) {
-            bank.deposit("ES0001", 500);
+        //if (account.equals("ES0001")) {
+          //  bank.deposit("ES0001", 500);
+        //}
+
+        if (account != null) {
+            account.deposit(500);
+        } else {
+            System.out.println("La cuenta no existe");
+        }
+
+        account = bank.findAccount("ES0002");
+        //if (account.equals("ES0002")) {
+        if (account != null) {
+            account.deposit(-30);
+        } else {
+            System.out.println("La cuenta no existe");
         }
     }
 }
