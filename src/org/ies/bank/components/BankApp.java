@@ -16,7 +16,6 @@ public class BankApp {
 
     public void run() {
         int option;
-        Bank bank = bankReader.read();
 
         do {
             System.out.println("Elige una opción");
@@ -35,9 +34,11 @@ public class BankApp {
 
             switch (option) {
                 case 1:
+                    Bank bank = bankReader.read();
                     bank.showAccounts();
                     break;
                 case 2:
+                    bank = bankReader.read();
                     System.out.println("Introduce el IBAN: ");
                     String iban = scanner.nextLine();
                     Account account = bank.findAccount(iban);
@@ -48,12 +49,14 @@ public class BankApp {
                     }
                     break;
                 case 3:
+                    bank = bankReader.read();
                     System.out.println("Introduce el NIF: ");
                     String nif = scanner.nextLine();
-                    bank.showAccounts(nif);
+                    bank.showAccountsNif(nif);
                     break;
 
                 case 4:
+                    bank = bankReader.read();
                     System.out.print("Introduce un IBAN: ");
                     iban = scanner.nextLine();
                     System.out.print("Cuánto dinero vas a ingresar?: ");
@@ -64,6 +67,7 @@ public class BankApp {
                     break;
 
                 case 5:
+                    bank = bankReader.read();
                     System.out.print("Introduce un IBAN: ");
                     iban = scanner.nextLine();
                     System.out.print("Cuánto dinero vas a retirar?: ");
@@ -74,6 +78,7 @@ public class BankApp {
                     break;
 
                 case 6:
+                    bank = bankReader.read();
                     System.out.println("Introduce tu NIF: ");
                     nif = scanner.nextLine();
 
@@ -81,6 +86,7 @@ public class BankApp {
                     break;
 
                 case 7:
+                    bank = bankReader.read();
                     System.out.println("Introduce tu IBAN: ");
                     iban = scanner.nextLine();
 
@@ -88,6 +94,7 @@ public class BankApp {
                     break;
 
                 case 8:
+                    bank = bankReader.read();
                     System.out.print("Introduce tu IBAN: ");
                     iban = scanner.nextLine();
 

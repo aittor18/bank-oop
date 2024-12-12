@@ -20,7 +20,7 @@ public class AccountReader {
         String iban = scanner.nextLine();
         System.out.print("Saldo: ");
         double balance = scanner.nextDouble();
-        System.out.print("Cliente: ");
+        scanner.nextLine();
         Customer customer = customerReader.read();
 
         return new Account(

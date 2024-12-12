@@ -54,7 +54,7 @@ public class Bank {
         }
     }
 
-    public void showAccounts(String nif) {
+    public void showAccountsNif(String nif) {
         boolean found = false;
         for (var account : accounts) {
 

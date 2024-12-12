@@ -4,7 +4,6 @@ import org.ies.bank.components.AccountReader;
 import org.ies.bank.components.BankApp;
 import org.ies.bank.components.BankReader;
 import org.ies.bank.components.CustomerReader;
-import org.ies.bank.model.MainBankApp2;
 
 import java.util.Scanner;
 
