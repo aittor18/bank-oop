@@ -1,6 +1,7 @@
 package org.ies.bank.components;
 
 import org.ies.bank.model.Bank;
+import org.ies.bank.model.Customer;
 
 import java.util.Scanner;
 
@@ -37,10 +38,14 @@ public class BankAppMenu {
                 case 2:
                     System.out.print("Introduce un número de IBAN: ");
                     String iban = scanner.nextLine();
-                    bankData.showInfo(iban);
+                    var account = bankData.findAccount(iban);
                     break;
 
                 case 3:
+                    bankData.showAccounts();
+                    break;
+
+                case 4:
 
             }
         } while (option != 9);
