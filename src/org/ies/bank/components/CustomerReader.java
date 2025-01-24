@@ -4,7 +4,7 @@ import org.ies.bank.model.Customer;
 
 import java.util.Scanner;
 
-public class CustomerReader {
+public class CustomerReader implements CustReader{
     private final Scanner scanner;
 
     public CustomerReader(Scanner scanner) {
