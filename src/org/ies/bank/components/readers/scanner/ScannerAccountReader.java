@@ -1,17 +1,17 @@
-package org.ies.bank.components;
+package org.ies.bank.components.readers.scanner;
 
 import org.ies.bank.model.Account;
 import org.ies.bank.model.Customer;
 
 import java.util.Scanner;
 
-public class AccountReader {
+public class ScannerAccountReader {
     private final Scanner scanner;
-    private final CustomerReader customerReader;
+    private final ScannerCustomerReader scannerCustomerReader;
 
-    public AccountReader(Scanner scanner, CustomerReader customerReader) {
+    public ScannerAccountReader(Scanner scanner, ScannerCustomerReader scannerCustomerReader) {
         this.scanner = scanner;
-        this.customerReader = customerReader;
+        this.scannerCustomerReader = scannerCustomerReader;
     }
 
     public Account read() {
@@ -21,7 +21,7 @@ public class AccountReader {
         System.out.print("Saldo: ");
         double balance = scanner.nextDouble();
         scanner.nextLine();
-        Customer customer = customerReader.read();
+        Customer customer = scannerCustomerReader.read();
 
         return new Account(
                 iban,

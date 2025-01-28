@@ -1,16 +1,17 @@
 package org.ies.bank.components;
 
+import org.ies.bank.components.readers.scanner.ScannerBankReader;
 import org.ies.bank.model.Account;
 import org.ies.bank.model.Bank;
 
 import java.util.Scanner;
 
 public class BankApp {
-    private final BankReader bankReader;
+    private final ScannerBankReader scannerBankReader;
     private final Scanner scanner;
 
-    public BankApp(BankReader bankReader, Scanner scanner) {
-        this.bankReader = bankReader;
+    public BankApp(ScannerBankReader scannerBankReader, Scanner scanner) {
+        this.scannerBankReader = scannerBankReader;
         this.scanner = scanner;
     }
 
@@ -27,11 +28,11 @@ public class BankApp {
     private void loopMenu(int option) {
         switch (option) {
             case 1:
-                Bank bank = bankReader.read();
+                Bank bank = scannerBankReader.read();
                 bank.showAccounts();
                 break;
             case 2:
-                bank = bankReader.read();
+                bank = scannerBankReader.read();
                 System.out.println("Introduce el IBAN: ");
                 String iban = scanner.nextLine();
                 Account account = bank.findAccount(iban);
@@ -42,13 +43,13 @@ public class BankApp {
                 }
                 break;
             case 3:
-                bank = bankReader.read();
+                bank = scannerBankReader.read();
                 System.out.println("Introduce el NIF: ");
                 String nif = scanner.nextLine();
                 bank.showAccountsNif(nif);
                 break;
             case 4:
-                bank = bankReader.read();
+                bank = scannerBankReader.read();
                 System.out.print("Introduce un IBAN: ");
                 iban = scanner.nextLine();
                 System.out.print("Cuánto dinero vas a ingresar?: ");
@@ -58,7 +59,7 @@ public class BankApp {
                 bank.deposit(iban, amount);
                 break;
             case 5:
-                bank = bankReader.read();
+                bank = scannerBankReader.read();
                 System.out.print("Introduce un IBAN: ");
                 iban = scanner.nextLine();
                 System.out.print("Cuánto dinero vas a retirar?: ");
@@ -68,21 +69,21 @@ public class BankApp {
                 bank.deposit(iban, -amount1);
                 break;
             case 6:
-                bank = bankReader.read();
+                bank = scannerBankReader.read();
                 System.out.println("Introduce tu NIF: ");
                 nif = scanner.nextLine();
 
                 bank.countAccounts(nif);
                 break;
             case 7:
-                bank = bankReader.read();
+                bank = scannerBankReader.read();
                 System.out.println("Introduce tu IBAN: ");
                 iban = scanner.nextLine();
 
                 bank.findClientAccount(iban);
                 break;
             case 8:
-                bank = bankReader.read();
+                bank = scannerBankReader.read();
                 System.out.print("Introduce tu IBAN: ");
                 iban = scanner.nextLine();
 

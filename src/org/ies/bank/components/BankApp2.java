@@ -1,17 +1,18 @@
 package org.ies.bank.components;
 
+import org.ies.bank.components.readers.scanner.ScannerBankReader;
 import org.ies.bank.model.Account;
 import org.ies.bank.model.Bank;
 
 public class BankApp2 {
-    private final BankReader bankReader;
+    private final ScannerBankReader scannerBankReader;
 
-    public BankApp2(BankReader bankReader) {
-        this.bankReader = bankReader;
+    public BankApp2(ScannerBankReader scannerBankReader) {
+        this.scannerBankReader = scannerBankReader;
     }
 
     public void run() {
-        Bank bank = bankReader.read();
+        Bank bank = scannerBankReader.read();
 
         Account account = bank.findAccount("ES0001");
 

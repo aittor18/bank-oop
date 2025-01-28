@@ -1,22 +1,21 @@
 package org.ies.bank.components;
 
-import org.ies.bank.model.Bank;
-import org.ies.bank.model.Customer;
+import org.ies.bank.components.readers.scanner.ScannerBankReader;
 
 import java.util.Scanner;
 
 public class BankAppMenu {
     private final Scanner scanner;
-    private final BankReader bankReader;
+    private final ScannerBankReader scannerBankReader;
 
-    public BankAppMenu(Scanner scanner, BankReader bankReader) {
+    public BankAppMenu(Scanner scanner, ScannerBankReader scannerBankReader) {
         this.scanner = scanner;
-        this.bankReader = bankReader;
+        this.scannerBankReader = scannerBankReader;
     }
 
     public void run() {
         int option;
-        var bankData = bankReader.read();
+        var bankData = scannerBankReader.read();
         do {
             System.out.println("1. Mostrar las cuentas del banco");
             System.out.println("2. Mostrar datos de una cuenta");
