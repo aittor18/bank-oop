@@ -1,7 +1,7 @@
 package org.ies.bank;
 
 import org.ies.bank.components.readers.scanner.ScannerAccountReader;
-import org.ies.bank.components.BankApp;
+import org.ies.bank.components.readers.scanner.BankApp;
 import org.ies.bank.components.readers.scanner.ScannerBankReader;
 import org.ies.bank.components.readers.scanner.ScannerCustomerReader;
 

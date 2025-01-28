@@ -1,6 +1,4 @@
-package org.ies.bank.components;
-
-import org.ies.bank.components.readers.scanner.ScannerBankReader;
+package org.ies.bank.components.readers.scanner;
 
 import java.util.Scanner;
 

@@ -1,12 +1,12 @@
-package org.ies.bank.components;
+package org.ies.bank.components.readers.scanner;
 
-import org.ies.bank.components.readers.scanner.ScannerBankReader;
+import org.ies.bank.components.readers.BankAppInterface;
 import org.ies.bank.model.Account;
 import org.ies.bank.model.Bank;
 
 import java.util.Scanner;
 
-public class BankApp {
+public class BankApp implements BankAppInterface {
     private final ScannerBankReader scannerBankReader;
     private final Scanner scanner;
 
@@ -14,6 +14,7 @@ public class BankApp {
         this.scannerBankReader = scannerBankReader;
         this.scanner = scanner;
     }
+
 
     public void run() {
         int option;

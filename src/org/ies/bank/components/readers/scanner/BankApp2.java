@@ -1,10 +1,10 @@
-package org.ies.bank.components;
+package org.ies.bank.components.readers.scanner;
 
-import org.ies.bank.components.readers.scanner.ScannerBankReader;
+import org.ies.bank.components.readers.BankApp2Interface;
 import org.ies.bank.model.Account;
 import org.ies.bank.model.Bank;
 
-public class BankApp2 {
+public class BankApp2 implements BankApp2Interface {
     private final ScannerBankReader scannerBankReader;
 
     public BankApp2(ScannerBankReader scannerBankReader) {
